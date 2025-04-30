@@ -4,12 +4,11 @@ const utilisateur = require("../Controller/utilisateursController.js");
 
 router.post("/AjoutUser",utilisateur.ajouterUtilisateur);
 
-//router.delete("/deleteProfil",verifyToken,utilisateursController.DeleteProfil);
+router.delete("/deleteProfil",utilisateur.DeleteProfil);
 
 // PUT : que pour lutilisateur
-//router.put("/modifyEmail",verifyToken,utilisateursController.modifyEmail);
+router.put("/modifyProdil",utilisateur.modifyProdil);
 
-
-
+router.get("/getProfile",utilisateur.GetProfil);
 
 module.exports = router;
