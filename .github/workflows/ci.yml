@@ -1,4 +1,4 @@
-name: CI/CD for Growtrack
+name: CI/CD for mini app
 
 on:
   push:
