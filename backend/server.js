@@ -13,10 +13,11 @@ const corsOptions = {
 app.use(express.json());
 app.use(cors(corsOptions));
 
+const Affectation = require("./Route/Affectation");
+app.use("/api/AffectationRoute", Affectation)
 
-
-const TEST = require("./route/TEST");
-app.use("/api/TEST", TEST)
+const Utilisateurs = require("./Route/PersonneRoute");
+app.use("/api/PersonneRoute", Utilisateurs)
 
 
 app.listen(PORT, () => {
