@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: your-backend-name
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    plan: free # or 'starter'/'standard' for paid plans
