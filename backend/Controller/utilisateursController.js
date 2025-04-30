@@ -1,16 +1,16 @@
 const authModel = require("../Model/utilisateursModel.js");
 
 
-exports.FuncInscription = [
+exports.ajouterUtilisateur = [
   async (req, res) => {
   
-    const { Nom, Prenom, Email, CIN, Date_Naissance} = req.body;
+    const {Nom,Prenom,Email,CIN,Date_Naissance} = req.body;
   
   
     try {       
         
-        const utilisateur = await authModel.ajouterUtilisateur(id,nom,email,motDePasseSecurise,date_naissance,lieu_naissance);
-        res.status(201).json({ message: "Inscription réussie ✅", utilisateur: Nutilisateur });
+        const utilisateur = await authModel.ajouterUtilisateur(Nom,Prenom,Email,CIN,Date_Naissance);
+        res.status(201).json({ message: "Inscription réussie ✅", utilisateur: utilisateur });
   
     } catch (error) {
         console.error(error); 
